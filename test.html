@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+<body>
+  <!-- crud -->
+  <div class="container py-5">
+    <form action="">
+      <div class="mb-3">
+        <label for="prodcutName">Prodcut Name</label>
+        <input type="text" class="form-control" id="prodcutName">
+      </div>
+      <div class="mb-3">
+        <label for="prodcutPrice">Prodcut Price</label>
+        <input type="text" class="form-control" id="prodcutPrice">
+      </div>
+      <div>
+        <label for="prodcutCategory">Prodcut Category</label>
+        <select id="prodcutCategory" class="form-select">
+          <option value="tv">Tv</option>
+          <option value="mobile">Mobile</option>
+          <option value="laptop">Laptop</option>
+        </select>
+      </div>
+      <div class="mt-3">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="prodcutSale">
+          <label class="form-check-label" for="prodcutSale">Prodcut Sale</label>
+        </div>
+      </div>
+      <div class="mt-3">
+        <label for="">Prodcut Description</label>
+        <textarea type="text" class="form-control" id="prodcutDescription"></textarea>
+      </div>
+      <button type="button" class="btn btn-outline-info mt-4 me-2" onclick="addProdcut()">Add Prodcut</button>
+      <button type="button" class="btn btn-outline-danger mt-4 " onclick="clearForm()">Clear Form</button>
+    </form>
+    <input onkeyup="searchProdcut()" id="searchInput" class="form-control mx-auto my-5 w-50" placeholder="Search.........">
+    <table class="table text-center table-striped table-bordered table-dark">
+      <thead>
+        <th >Index</th>
+        <th>Prodcut Name</th>
+        <th>Prodcut Price</th>
+        <th>Prodcut Category</th>
+        <th>Prodcut Sale</th>
+        <th>Prodcut Description </th>
+        <th>Update </th>
+        <th>Delete </th>
+      </thead>
+      <tbody id="myData">
+        <span class="bg-info"></span>
+
+
+      </tbody>
+    </table>
+
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
